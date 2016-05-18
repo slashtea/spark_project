@@ -10,7 +10,7 @@ my_xtricks = []
 i=1
 
 # Database connection
-connection = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "Australia4ever", db = "tweetData")
+connection = MySQLdb.connect(host = "127.0.0.1", user = "root", passwd = "", db = "tweetData")
 cursor = connection.cursor()
 cursor.execute ("SELECT country, count( country ) AS cs FROM tweets WHERE sentiment = 'positive' GROUP BY country")
 data = cursor.fetchall()
